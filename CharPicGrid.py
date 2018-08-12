@@ -28,30 +28,17 @@ grid = [['.', '.', '.', '.', '.', '.'],
         ['.', '.', '.', '.', '.', '.']] 
 
 def gridLoad():
-	y = 0
+	y = len(grid) -1
 	x = 0
+	i = 0	
 	
-	
-	"""
-	while x < len(grid[x]) : 
-		newgrid[x,y] = grid[y,x]
-	"""
-	"""
-	while y < len(grid):
-		y += 1
-	"""
-	
-	
-	
-	while y < len(grid):
-		while x < len(grid[x]) : 
-			x += 1
-			print(str(grid[x,y]),end='')
-		#newgrid[i] = grid[i]
-		y += 1
-		x = 0
-		print(y)
-	
-	
+	while x <= len(grid[y]) - 1:
+		while y >= 0: 
+			focusline = grid[y]
+			print(focusline[x], end = '')
+			y -= 1
+		print('')
+		y = len(grid) -1
+		x += 1
 	
 gridLoad()
